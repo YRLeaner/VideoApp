@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aiqiyi.ediswit">
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.PlayActivity"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|screenSize"></activity>
+        <activity android:name=".activity.SearchActivity"></activity>
+        <activity android:name=".activity.SettingActivity"></activity>
+        <activity android:name=".LikeTypeActivity"></activity>
+        <activity android:name=".activity.MyLikeActivity"></activity>
+        <activity android:name=".activity.SkinActivity"></activity>
+    </application>
+    <!--网络访问需要的权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--获取手机IMEI号需要的权限-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--获取WI-FI状态以及Mac地址需要的权限-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--判断网络连接状态需要-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--改变屏幕方向-->
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+</manifest>
